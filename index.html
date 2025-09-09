@@ -5,6 +5,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>برای مهنا 💃❤️</title>
 
+<!-- فونت زیبا -->
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+
 <style type="text/css">
 @font-face {
 	font-family: digit;
@@ -13,6 +16,7 @@
 
 body {
 	transition: background 0.5s, color 0.5s;
+	font-family: 'Dancing Script', cursive;
 }
 
 body.dark-mode {
@@ -44,6 +48,12 @@ body.dark-mode {
 #playMusic {
 	background: #ff4d6d;
 	color: #fff;
+}
+
+#messages {
+	font-size: 22px;
+	text-align: center;
+	line-height: 1.6em;
 }
 </style>
 
@@ -89,11 +99,12 @@ body.dark-mode {
 			<canvas id="garden"></canvas>
 			<div id="words">
 				<div id="messages">
-  🌹 Tanışma Tarihi
-  <div id="elapseClock"></div>
+   🌹 Tanışma Tarihi <br/>
+   Aşkım sensin.<br/>
+   Yalnız benim. ❤️
+   <div id="elapseClock"></div>
 </div>
 <div id="loveu">
-  Aşkım sensin. Yalnız benim. ❤️<br/>
   <div class="signature">- ALI</div>
 </div>
 			</div>
@@ -105,7 +116,8 @@ body.dark-mode {
 var offsetX = $("#loveHeart").width() / 2;
 var offsetY = $("#loveHeart").height() / 2 - 55;
 var together = new Date();
-together.setFullYear(2025, 9, 1);
+// تاریخ شروع آشنایی = ۹ روز قبل
+together.setFullYear(2025, 7, 31); // ماه‌ها از 0 شروع میشن → 7 = آگوست
 together.setHours(21);
 together.setMinutes(30);
 together.setSeconds(0);
@@ -151,4 +163,4 @@ document.getElementById("toggleTheme").addEventListener("click", function(){
 </script>
 
 </body>
-      </html>
+			</html>

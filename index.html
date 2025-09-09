@@ -1,107 +1,154 @@
-<!DOCTYPE html>
-<html lang="fa">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <meta charset="UTF-8">
-  <title>برای مهنا 💃❤️</title>
+<script src="https://kit.fontawesome.com/a14ae32021.js" crossorigin="anonymous"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>برای مهنا 💃❤️</title>
 
-  <!-- اضافه کردن فونت فارسی Vazir -->
-  <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet">
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
 
-  <style>
-    body {
-      font-family: 'Vazir', Tahoma, sans-serif;
-      text-align: center;
-      background: #fff8f0;
-      color: #222;
-      transition: background 0.5s, color 0.5s;
-    }
+body {
+	transition: background 0.5s, color 0.5s;
+}
 
-    .dark-mode {
-      background: #111;
-      color: #eee;
-    }
+body.dark-mode {
+	background: #111 !important;
+	color: #eee !important;
+}
 
-    .container {
-      max-width: 700px;
-      margin: 50px auto;
-      padding: 20px;
-      border-radius: 20px;
-    }
+#controls {
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	z-index: 999;
+}
 
-    p {
-      font-size: 20px;
-      line-height: 2;
-      text-align: right;
-      direction: rtl;
-    }
+#controls button {
+	margin: 5px;
+	padding: 8px 14px;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	font-size: 14px;
+}
 
-    button {
-      margin: 10px;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 12px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: 0.3s;
-      font-family: 'Vazir', Tahoma, sans-serif;
-    }
+#toggleTheme {
+	background: #333;
+	color: #fff;
+}
 
-    .btn-music {
-      background: #ff4d6d;
-      color: #fff;
-    }
+#playMusic {
+	background: #ff4d6d;
+	color: #fff;
+}
+</style>
 
-    .btn-music:hover {
-      background: #e63956;
-    }
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
 
-    .btn-theme {
-      background: #333;
-      color: #fff;
-    }
-
-    .btn-theme:hover {
-      background: #555;
-    }
-  </style>
 </head>
+
 <body>
-  <div class="container">
-    <h2>🌹 برای مهنا 💃</h2>
 
-    <p>
-      مهنا جان 💃  
-      از روزی که نگاهت را دیدم، قلبم ریتمی تازه گرفت.  
-      تو نه فقط یک استاد رقصی، بلکه آهنگ زندگی منی.  
-      هر قدمت، هر حرکتت، مثل شعری است که در جانم حک می‌شود.  
-      <br><br>
-      دلم می‌خواهد همیشه تماشاگر رقص تو باشم،  
-      و در سکوت، عاشقانه برایت دست بزنم.  
-      <br><br>
-      🌹 فقط خواستم بگویم: تو برای من خاص‌ترین هستی.
-    </p>
+<!-- دکمه‌ها -->
+<div id="controls">
+	<button id="toggleTheme">🌓 حالت شب/روز</button>
+	<button id="playMusic">🎶 پخش/توقف آهنگ</button>
+</div>
 
-    <!-- دکمه پخش آهنگ -->
-    <audio id="mySong" src="song.mp3"></audio>
-    <button class="btn-music" onclick="playSong()">🎶 پخش / توقف آهنگ</button>
+<!-- آهنگ -->
+<audio id="mySong" src="song.mp3"></audio>
 
-    <!-- دکمه تغییر حالت شب/روز -->
-    <button class="btn-theme" onclick="toggleTheme()">🌓 تغییر حالت شب/روز</button>
-  </div>
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="comments">/**</span><br />
+			<span class="space"/><span class="comments">* نامه‌ای برای مهنا 💃</span><br />
+			<span class="space"/><span class="comments">*/</span><br />
+			مهنا جان 💃<br />
+			از روزی که نگاهت را دیدم، قلبم ریتمی تازه گرفت؛<br />
+			تو نه فقط یک استاد رقصی، بلکه آهنگ زندگی منی.<br />
+			هر قدمت، هر حرکتت، مثل شعری‌ست که در جانم حک می‌شود.<br />
+			<br />
+			دلم می‌خواهد همیشه تماشاگر رقص تو باشم<br />
+			و در سکوت، عاشقانه برایت دست بزنم.<br />
+			<br />
+			🌹 فقط خواستم بگویم: تو برای من خاص‌ترین هستی.<br />
+			<br>
+			<span id="heartspan">
+			<a href="image.jpg"><i class="fas fa-heart" id="icon"></i></a>
+			</span>
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					🌹 FOREVER
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					I LOVE YOU SO MUCH<br/>
+					<div class="signature">- ALITURK</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
-  <script>
-    function playSong(){
-      let song = document.getElementById("mySong");
-      if(song.paused){
-        song.play();
-      } else {
-        song.pause();
-      }
-    }
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2016, 8, 5);
+together.setHours(16);
+together.setMinutes(30);
+together.setSeconds(0);
+together.setMilliseconds(0);
 
-    function toggleTheme(){
-      document.body.classList.toggle("dark-mode");
-    }
-  </script>
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+
+// 🎶 پخش/توقف آهنگ
+document.getElementById("playMusic").addEventListener("click", function(){
+	let song = document.getElementById("mySong");
+	if(song.paused){
+		song.play();
+	} else {
+		song.pause();
+	}
+});
+
+// 🌓 تغییر حالت شب/روز
+document.getElementById("toggleTheme").addEventListener("click", function(){
+	document.body.classList.toggle("dark-mode");
+});
+</script>
+
 </body>
-</html>
+      </html>

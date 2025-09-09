@@ -5,7 +5,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>برای مهنا 💃❤️</title>
 
-<!-- فونت زیبا -->
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
 
 <style type="text/css">
@@ -16,7 +15,6 @@
 
 body {
 	transition: background 0.5s, color 0.5s;
-	font-family: 'Dancing Script', cursive;
 }
 
 body.dark-mode {
@@ -51,9 +49,25 @@ body.dark-mode {
 }
 
 #messages {
-	font-size: 22px;
+	font-family: 'Dancing Script', cursive;
 	text-align: center;
 	line-height: 1.6em;
+}
+
+#messages .title {
+	font-size: 22px;
+	font-weight: bold;
+}
+
+#messages .love-text {
+	font-size: 20px;
+	margin-top: 5px;
+}
+
+#elapseClock {
+	font-family: digit;
+	font-size: 16px;
+	margin-top: 8px;
 }
 </style>
 
@@ -99,14 +113,12 @@ body.dark-mode {
 			<canvas id="garden"></canvas>
 			<div id="words">
 				<div id="messages">
-   🌹 Tanışma Tarihi <br/>
-   Aşkım sensin.<br/>
-   Yalnız benim. ❤️
-   <div id="elapseClock"></div>
-</div>
-<div id="loveu">
-  <div class="signature">- ALI</div>
-</div>
+				   <div class="title">🌹 Tanışma Tarihi</div>
+				   <div class="love-text">Aşkım sensin.</div>
+				   <div class="love-text">Yalnız benim. ❤️</div>
+				   <div id="elapseClock"></div>
+				   <div class="signature">- ALI</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -116,8 +128,7 @@ body.dark-mode {
 var offsetX = $("#loveHeart").width() / 2;
 var offsetY = $("#loveHeart").height() / 2 - 55;
 var together = new Date();
-// تاریخ شروع آشنایی = ۹ روز قبل
-together.setFullYear(2025, 7, 31); // ماه‌ها از 0 شروع میشن → 7 = آگوست
+together.setFullYear(2025, 8, 31); // 📌 تاریخ شروع (9 روز پیش از امروز)
 together.setHours(21);
 together.setMinutes(30);
 together.setSeconds(0);

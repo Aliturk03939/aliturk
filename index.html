@@ -48,14 +48,6 @@ body.dark-mode {
 	color: #fff;
 }
 
-#messages {
-	font-family: 'Dancing Script', cursive;
-	text-align: center;
-	line-height: 1.6em;
-	color: #333;
-}
-
-/* ✅ متن دقیقاً وسط قلب */
 #words {
 	position: absolute;
 	top: 50%;
@@ -63,22 +55,22 @@ body.dark-mode {
 	transform: translate(-50%, -50%);
 	width: 80%;
 	text-align: center;
+	color: #333;
+	font-family: 'Dancing Script', cursive;
 }
 
-#messages .title {
-	font-size: 22px;
-	font-weight: bold;
-}
-
-#messages .love-text {
-	font-size: 20px;
-	margin-top: 5px;
-}
-
+/* تایمر بزرگ‌تر */
 #elapseClock {
 	font-family: digit;
-	font-size: 16px;
-	margin-top: 8px;
+	font-size: 26px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+/* متن عاشقانه کوچیک‌تر */
+.love-text {
+	font-size: 20px;
+	line-height: 1.4em;
 }
 
 .signature {
@@ -89,10 +81,9 @@ body.dark-mode {
 
 /* 📱 ریسپانسیو برای موبایل */
 @media (max-width: 600px) {
-	#messages .title { font-size: 18px; }
-	#messages .love-text { font-size: 16px; }
-	#elapseClock { font-size: 14px; }
-	.signature { font-size: 16px; }
+	#elapseClock { font-size: 20px; }
+	.love-text { font-size: 16px; }
+	.signature { font-size: 14px; }
 }
 </style>
 
@@ -137,13 +128,12 @@ body.dark-mode {
 		<div id="loveHeart">
 			<canvas id="garden"></canvas>
 			<div id="words">
-				<div id="messages">
-				   <div class="title">🌹 Tanışma Tarihi</div>
-				   <div class="love-text">Aşkım sensin.</div>
-				   <div class="love-text">Yalnız benim. ❤️</div>
-				   <div id="elapseClock"></div>
-				   <div class="signature">- ALI</div>
-				</div>
+				<!-- اول تایمر -->
+				<div id="elapseClock"></div>
+				<!-- بعد متن عاشقانه -->
+				<div class="love-text">Aşkım sensin.</div>
+				<div class="love-text">Yalnız benim. ❤️</div>
+				<div class="signature">- ALI</div>
 			</div>
 		</div>
 	</div>
@@ -199,4 +189,4 @@ document.getElementById("toggleTheme").addEventListener("click", function(){
 </script>
 
 </body>
-      </html>
+			</html>
